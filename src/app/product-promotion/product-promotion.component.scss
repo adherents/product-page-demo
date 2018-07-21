@@ -1,0 +1,52 @@
+.product-promotion {
+  padding-left: 10px;
+  padding-right: 10px;  
+}
+
+.promotion-title {
+  background-color: #f2f2f2;
+}
+
+h4 {
+  font-weight: bold;
+  line-height: 26px;
+  color: #3d4043;
+  font-size: 24px;
+  margin-bottom: 0;
+}
+
+button {
+  background-color: #e8e7e7;
+}
+
+.mat-icon {
+  color: #919194;
+}
+
+#active {
+  margin-right: 10px;
+}
+
+.dotted {
+  font-size: 13px;
+  color: #1792D6;
+  text-decoration: none;
+  cursor: pointer;
+  border-bottom: 1px dotted #1792D6;
+
+  &:hover {
+    border-bottom: none;
+    color: #1792D6;
+  }
+}
+
+#active a:focus {
+  color: #B3B4B7;
+  cursor: default;
+  border-bottom: none;
+  outline: none;
+}
+
+.footer {
+  margin-bottom: 1000px;
+}

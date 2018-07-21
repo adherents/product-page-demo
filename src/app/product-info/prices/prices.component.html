@@ -1,0 +1,72 @@
+<div class="sortBlock">
+  <mat-button-toggle-group value="1">
+    <mat-button-toggle value="1">
+      Популярные
+    </mat-button-toggle>
+    <mat-button-toggle value="2">
+      По росту цены
+    </mat-button-toggle>
+    <mat-button-toggle value="3">
+      По убыванию цены
+    </mat-button-toggle>
+  </mat-button-toggle-group>
+</div>
+<div>
+  <ul>
+    <li div fxLayout="row" fxLayoutAlign="space-between start">
+      <a href="#" fxFlex="30" class="price-logo">
+        <img class="img-responsive" src="https://imageserver.ibud.ua/third/2017/02/23/172x172x1/58ae86865606d9090-1455268817-4948-1454413883-1454407390-1418209664-13923677249-a4peremichkiweb.jpg">
+      </a>
+      <div fxFlex="40" fxLayout="column" class="price-descr">
+        <a href="#" class="price-name">Армированная перемычка AEROC ПБ120.10.25-10Н с облегченным армокаркасом</a>
+        <strong class="price-price">Цену уточняйте</strong>
+        <button mat-raised-button class="btnBlue" fxFlexAlign="start">Заказать</button>
+      </div>
+      <div fxFlex class="price-company" fxLayout="column">
+        <a href="#" class="price-company-name">Тов компанія купол</a>
+        <mat-icon id="icon" tooltip="Авторизованный дилер">check_circle</mat-icon>
+        <span class="price-city">Киев</span>
+        <p fxLayout="row" fxFlexAlign="start">+38 (067)&nbsp;<span [hidden]="!show">230-03-65</span><span [hidden]="show" (click)="showMore()" class="price-hide">Показать</span></p>
+        <p fxLayout="row" fxFlexAlign="start">+38 (095)&nbsp;<span [hidden]="!show">010-26-54</span><span [hidden]="show" (click)="showMore()" class="price-hide">Показать</span></p>
+        <a href="#" class="price-callme" fxLayout="row" fxFlexAlign="start"><mat-icon>call</mat-icon>Перезвоните мне</a>
+        <a class="link" href="#" fxLayout="row" fxFlexAlign="start"><mat-icon>chat</mat-icon>Отзывы</a>
+      </div>
+    </li>
+    <li div fxLayout="row" fxLayoutAlign="space-between start">
+      <a href="#" fxFlex="30" class="price-logo">
+        <img class="img-responsive" src="https://imageserver.ibud.ua/third/2017/02/23/172x172x1/58ae86865606d9090-1455268817-4948-1454413883-1454407390-1418209664-13923677249-a4peremichkiweb.jpg">
+      </a>
+      <div fxFlex="40" fxLayout="column" class="price-descr">
+        <a href="#" class="price-name">Армированная перемычка AEROC ПБ120.10.25-10Н с облегченным армокаркасом</a>
+        <strong class="price-price">Цену уточняйте</strong>
+        <button mat-raised-button class="btnBlue" fxFlexAlign="start">Заказать</button>
+      </div>
+      <div fxFlex class="price-company" fxLayout="column">
+        <a href="#" class="price-company-name">Тов компанія купол</a>
+        <span class="price-city" fxLayoutAlign="space-between center">Киев<span class="price-pro">PRO</span></span>
+        <p fxLayout="row" fxFlexAlign="start">+38 (067)&nbsp;<span [hidden]="!show">230-03-65</span><span [hidden]="show" (click)="showMore()" class="price-hide">Показать</span></p>
+        <p fxLayout="row" fxFlexAlign="start">+38 (095)&nbsp;<span [hidden]="!show">010-26-54</span><span [hidden]="show" (click)="showMore()" class="price-hide">Показать</span></p>
+        <a href="#" class="price-callme" fxLayout="row" fxFlexAlign="start"><mat-icon>call</mat-icon>Перезвоните мне</a>
+        <a class="link" href="#" fxLayout="row" fxFlexAlign="start"><mat-icon>chat</mat-icon>Отзывы</a>
+      </div>
+    </li>
+    <li div fxLayout="row" fxLayoutAlign="space-between start">
+      <a href="#" fxFlex="30" class="price-logo">
+        <img class="img-responsive" src="https://imageserver.ibud.ua/third/2017/02/23/172x172x1/58ae86865606d9090-1455268817-4948-1454413883-1454407390-1418209664-13923677249-a4peremichkiweb.jpg">
+      </a>
+      <div fxFlex="40" fxLayout="column" class="price-descr">
+        <a href="#" class="price-name">Армированная перемычка AEROC ПБ120.10.25-10Н с облегченным армокаркасом</a>
+        <strong class="price-price">Цену уточняйте</strong>
+        <button mat-raised-button class="btnBlue" fxFlexAlign="start">Заказать</button>
+      </div>
+      <div fxFlex class="price-company" fxLayout="column">
+        <a href="#" class="price-company-name">Тов компанія купол</a>
+        <span class="price-city">Киев</span>
+        <p fxLayout="row" fxFlexAlign="start">+38 (067)&nbsp;<span [hidden]="!show">230-03-65</span><span [hidden]="show" (click)="showMore()" class="price-hide">Показать</span></p>
+        <p fxLayout="row" fxFlexAlign="start">+38 (095)&nbsp;<span [hidden]="!show">010-26-54</span><span [hidden]="show" (click)="showMore()" class="price-hide">Показать</span></p>
+        <a href="#" class="price-callme" fxLayout="row" fxFlexAlign="start"><mat-icon>call</mat-icon>Перезвоните мне</a>
+        <a class="link" href="#" fxLayout="row" fxFlexAlign="start"><mat-icon>chat</mat-icon>Отзывы</a>
+      </div>
+    </li>
+  </ul>
+</div>

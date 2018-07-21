@@ -1,0 +1,55 @@
+section {
+  margin-bottom: 20px;
+}
+
+.reviews-empty {
+  padding: 100px 0;
+  font-size: 20px;
+  text-align: center;
+}
+
+h2 {
+  margin-bottom: 15px;
+}
+
+rating {
+  font-size: 35px;
+  color: #b3b4b7;
+  
+  &:hover {
+    color: #f43c4a;
+  }
+}
+
+.rating {
+  margin: 15px 0;
+}
+
+.mat-icon {
+  font-size: 15px;
+  height: 15px;
+  width: 15px;
+  margin-right: 10px;
+}
+
+.reviews-hide {
+  font-size: 14px;
+  color: #1792D6;
+  cursor: pointer;
+  text-decoration: none;
+  
+  &:hover, &:active {
+    color: #21416E;
+  }
+}
+
+.btnBlue {
+  background-color: #1792D6;
+  color: #fff;
+  padding: 0 6px 0 6px;
+  font-size: 13px;
+
+  &:hover {
+    background: #f43c4a;
+  }
+}

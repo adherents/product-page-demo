@@ -1,0 +1,21 @@
+<div fxFlex.gt-sm="1000px" class="product-promotion">
+  <div fxFlex fxLayout="column">
+    <div fxLayout="row" class="promotion-title" fxLayoutAlign="space-between center">
+      <h4 fxFlex>С этим покупают</h4>
+      <div>
+        <button mat-button (click)="showPrev()"><mat-icon>arrow_back_ios</mat-icon></button>
+        <button mat-button (click)="showNext()"><mat-icon>arrow_forward_ios</mat-icon></button>
+      </div>   
+    </div> 
+    <div>
+      <span id="active"><a tabindex="1" class="dotted">Все</a></span>
+      <span id="active"><a tabindex="2" class="dotted">Ковш для клеевого раствора</a></span>
+      <span id="active"><a tabindex="3" class="dotted">Клеевые смеси</a></span>
+      <span id="active"><a tabindex="4" class="dotted">Газоблоки стеновые</a></span>
+    </div>
+    <div fxFlex>
+      <ngx-gallery #gallery [options]="galleryOptions" [images]="galleryImages" #buttonsNavigationGallery></ngx-gallery>
+    </div>
+    <div class="footer"></div>
+  </div>
+</div>

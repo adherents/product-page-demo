@@ -1,0 +1,24 @@
+.instructions {
+  margin-top: 20px;
+}
+
+h6 {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+ul, li {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  border-bottom: 1px solid #EDECEC;
+  padding: 7px 0;
+}
+
+a {
+  color: #21416E;
+  font-size: 14px;
+  text-decoration: none;
+}

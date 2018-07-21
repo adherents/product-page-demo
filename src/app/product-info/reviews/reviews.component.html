@@ -1,0 +1,96 @@
+<section>
+  <div class="reviews-empty">
+    К 'Армированная перемычка AEROC ПБ120.10.25-10Н с облегченным армокаркасом' не оставлено ни одного отзыва. Будьте первым!
+  </div>
+  <div>
+    <h2>Добавить отзыв</h2>
+    <form
+      #f="ngForm">
+      <div fxLayoutAlign="space-between start">
+        <mat-form-field hideRequiredMarker="true" fxFlex="48">
+          <input 
+            type="name"
+            matInput
+            placeholder="ФИО"
+            ngModel
+            name="name"
+            required
+            #nameInput="ngModel"
+            pattern="^([[а-яА-ЯёЁіІєЄїЇa-zA-Z]{2,}\s[[а-яА-ЯёЁіІєЄїЇa-zA-Z]{1,}'?-?[[а-яА-ЯёЁіІєЄїЇa-zA-Z]{2,}\s?([[а-яА-ЯёЁіІєЄїЇa-zA-Z]{1,})?)">
+          <mat-error *ngIf="nameInput.hasError('required')">Поле необходимо заполнить</mat-error>
+          <mat-error *ngIf="!nameInput.hasError('required')">Введите Ваше имя и фамилию</mat-error>
+        </mat-form-field>
+        <mat-form-field hideRequiredMarker="true" fxFlex="48">
+          <input 
+            type="email"
+            matInput
+            placeholder="E-mail"
+            ngModel
+            name="email"
+            email
+            required
+            #emailInput="ngModel">
+          <mat-error *ngIf="nameInput.hasError('required')">Поле необходимо заполнить</mat-error>
+          <mat-error *ngIf="!nameInput.hasError('required')">Введите корректный e-mail</mat-error>
+        </mat-form-field>
+      </div>
+      <div class="rating">
+        <rating 
+          [ngModelOptions]="{standalone: true}"
+          [(ngModel)]="rate" 
+          [max]="max" 
+          [readonly]="isReadonly"
+          [titles]="titles"
+          (keyup)="confirmSelection($event)">
+        </rating>
+      </div>
+      <div fxLayout="column">
+        <mat-form-field hideRequiredMarker="true" fxFlex>
+          <textarea 
+            rows="6" 
+            cols="40" 
+            placeholder="Оставьте комментарий"
+            type="review"
+            matInput
+            ngModel
+            name="review"
+            required
+            minlength="10"
+            maxlength="500"
+            #reviewInput="ngModel"></textarea>
+          <mat-hint align="end">{{ reviewInput.value?.length }} / 500</mat-hint>
+          <mat-error *ngIf="reviewInput.hasError('required')">Поле необходимо заполнить</mat-error>
+          <mat-error *ngIf="!reviewInput.hasError('required')">Комментарий должен быть не меньше 10 символов</mat-error>
+        </mat-form-field>
+        <mat-form-field [hidden]="!show">
+          <mat-icon matPrefix>thumb_up</mat-icon>
+          <input 
+            type="text" 
+            matInput 
+            name="pros"
+            #pros
+            placeholder="Достоинства">
+        </mat-form-field>
+        <mat-form-field [hidden]="!show">
+          <mat-icon matPrefix>thumb_down</mat-icon>
+          <input 
+            type="text" 
+            matInput 
+            name="cons"
+            #cons
+            placeholder="Недостатки">
+        </mat-form-field>
+        <span class="reviews-hide" [hidden]="show" (click)="showMore()">Указать достоинства/недостатки</span>
+        <span class="reviews-hide" [hidden]="!show" (click)="showMore();pros.value='';cons.value=''">Скрыть</span>
+      </div>
+      <div fxLayoutAlign="end start">
+        <button 
+        class="btnBlue"
+        type="submit" 
+        mat-raised-button 
+        color="primary"
+        [disabled]="f.invalid">ОТПРАВИТЬ</button>
+      </div>
+    </form>
+  </div>
+</section>

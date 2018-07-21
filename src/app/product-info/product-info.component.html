@@ -1,0 +1,27 @@
+<div fxFlex.gt-sm="1000px" fxFlex.lt-md="100" fxLayoutAlign="space-evenly center">
+  <div fxFlex.gt-sm="67" fxFlex.lt-md="95">
+    <br>    
+    <tabset [justified]="true" #staticTabs id="staticTabs">
+      <tab>
+        <ng-template tabHeading><span>Описание</span></ng-template>
+        <pp-description></pp-description>
+      </tab>
+      <tab>
+        <ng-template tabHeading><span>Цены<sup>28</sup></span></ng-template>
+        <pp-prices></pp-prices>
+      </tab>
+      <tab>
+        <ng-template tabHeading><span>Характеристики</span></ng-template>
+        <pp-properties></pp-properties>
+      </tab>
+      <tab>
+        <ng-template tabHeading><span>Отзывы<sup>0</sup></span></ng-template>
+        <pp-reviews id="reviews"></pp-reviews>
+      </tab>
+      <tab>
+        <ng-template tabHeading><span>Инструкции</span></ng-template>
+        <pp-instructions></pp-instructions>
+      </tab>
+    </tabset>
+  </div>
+</div>
