@@ -9,8 +9,13 @@ import { TabsetComponent } from 'ngx-bootstrap';
 })
 export class ProductInfoComponent {
   @ViewChild('staticTabs') staticTabs: TabsetComponent;
- 
-  public selectTab() {
+  
+  public selectTabPrices() {
+    this.staticTabs.tabs[1].active = true;
+  }
+  
+  public selectTabReviews() {
     this.staticTabs.tabs[3].active = true;
   }
+
 }

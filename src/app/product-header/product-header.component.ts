@@ -13,8 +13,12 @@ export class ProductHeaderComponent {
   galleryOptions: NgxGalleryOptions[];
   galleryImages: NgxGalleryImage[];
 
+  openPrices() {
+    this.reviews.selectTabPrices();
+  }
+
   openReview() {
-    this.reviews.selectTab();
+    this.reviews.selectTabReviews();
   }
 
   constructor() { }

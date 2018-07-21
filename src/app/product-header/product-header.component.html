@@ -10,7 +10,7 @@
       <div fxLayout="column" fxFlex="50">
         <b>Цену уточняйте</b>
         <span class="offers">Предложений: 28</span>
-        <button class="btnBlue" mat-raised-button fxFlexAlign="start">Смотреть все цены</button>
+        <button (click)="openPrices()" pageScroll href="#staticTabs" class="btnBlue" mat-raised-button fxFlexAlign="start">Смотреть все цены</button>
         <div class="linkFullProd" fxLayout="column">
           <span fxFlexAlign="start" matTooltip="Оценок нет" matTooltipPosition="above">
             <mat-icon id="star">star_rate</mat-icon>
