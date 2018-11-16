@@ -30,8 +30,8 @@
             email
             required
             #emailInput="ngModel">
-          <mat-error *ngIf="nameInput.hasError('required')">Поле необходимо заполнить</mat-error>
-          <mat-error *ngIf="!nameInput.hasError('required')">Введите корректный e-mail</mat-error>
+          <mat-error *ngIf="emailInput.hasError('required')">Поле необходимо заполнить</mat-error>
+          <mat-error *ngIf="!emailInput.hasError('required')">Введите корректный e-mail</mat-error>
         </mat-form-field>
       </div>
       <div class="rating">

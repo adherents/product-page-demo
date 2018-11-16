@@ -12,7 +12,7 @@
         <span class="offers">Предложений: 28</span>
         <button (click)="openPrices()" pageScroll href="#staticTabs" class="btnBlue" mat-raised-button fxFlexAlign="start">Смотреть все цены</button>
         <div class="linkFullProd" fxLayout="column">
-          <span fxFlexAlign="start" matTooltip="Оценок нет" matTooltipPosition="above">
+          <span fxFlexAlign="start" tooltip="Оценок нет" placement="top">
             <mat-icon id="star">star_rate</mat-icon>
             <mat-icon id="star">star_rate</mat-icon>
             <mat-icon id="star">star_rate</mat-icon>
@@ -26,44 +26,52 @@
 
     </div>
     <div fxLayout="column">
-        <mat-expansion-panel expanded="true">
-          <mat-expansion-panel-header>
-            <mat-panel-title>
-              Другое сечение
-            </mat-panel-title>
-          </mat-expansion-panel-header>
-          <div>
-            <a href="#"><img tooltip="Армированная перемычка AEROC ПБ120.10.25-10Н с облегченным армокаркасом" class="miniature-panel" src="https://imageserver.ibud.ua/third/2014/12/10/67x67x1/1454407390-1418209664-13923677249-a4peremichkiweb.jpg"></a>
-            <a href="#"><img tooltip="Армированная перемычка AEROC ПБ120.10.25-10Н с облегченным армокаркасом" class="miniature-panel" src="https://imageserver.ibud.ua/third/2014/12/10/67x67x1/1454407390-1418209664-13923677249-a4peremichkiweb.jpg"></a>
-            <a href="#"><img tooltip="Армированная перемычка AEROC ПБ120.10.25-10Н с облегченным армокаркасом" class="miniature-panel" src="https://imageserver.ibud.ua/third/2014/12/10/67x67x1/1454407390-1418209664-13923677249-a4peremichkiweb.jpg"></a>
-            <a href="#"><img tooltip="Армированная перемычка AEROC ПБ120.10.25-10Н с облегченным армокаркасом" class="miniature-panel" src="https://imageserver.ibud.ua/third/2014/12/10/67x67x1/1454407390-1418209664-13923677249-a4peremichkiweb.jpg"></a>
-            <a href="#"><img tooltip="Армированная перемычка AEROC ПБ120.10.25-10Н с облегченным армокаркасом" class="miniature-panel" src="https://imageserver.ibud.ua/third/2014/12/10/67x67x1/1454407390-1418209664-13923677249-a4peremichkiweb.jpg"></a>
-            <a href="#"><img tooltip="Армированная перемычка AEROC ПБ120.10.25-10Н с облегченным армокаркасом" class="miniature-panel" src="https://imageserver.ibud.ua/third/2014/12/10/67x67x1/1454407390-1418209664-13923677249-a4peremichkiweb.jpg"></a>
-            <a href="#"><img tooltip="Армированная перемычка AEROC ПБ120.10.25-10Н с облегченным армокаркасом" class="miniature-panel" src="https://imageserver.ibud.ua/third/2014/12/10/67x67x1/1454407390-1418209664-13923677249-a4peremichkiweb.jpg"></a>
-            <a href="#"><img tooltip="Армированная перемычка AEROC ПБ120.10.25-10Н с облегченным армокаркасом" class="miniature-panel" src="https://imageserver.ibud.ua/third/2014/12/10/67x67x1/1454407390-1418209664-13923677249-a4peremichkiweb.jpg"></a>
-            <a href="#"><img tooltip="Армированная перемычка AEROC ПБ120.10.25-10Н с облегченным армокаркасом" class="miniature-panel" src="https://imageserver.ibud.ua/third/2014/12/10/67x67x1/1454407390-1418209664-13923677249-a4peremichkiweb.jpg"></a>
-            <a href="#"><img tooltip="Армированная перемычка AEROC ПБ120.10.25-10Н с облегченным армокаркасом" class="miniature-panel" src="https://imageserver.ibud.ua/third/2014/12/10/67x67x1/1454407390-1418209664-13923677249-a4peremichkiweb.jpg"></a>
-          </div>
-          <div [hidden]="!show">
-            <a href="#"><img tooltip="Армированная перемычка AEROC ПБ120.10.25-10Н с облегченным армокаркасом" class="miniature-panel" src="https://imageserver.ibud.ua/third/2014/12/10/67x67x1/1454407390-1418209664-13923677249-a4peremichkiweb.jpg"></a>
-            <a href="#"><img tooltip="Армированная перемычка AEROC ПБ120.10.25-10Н с облегченным армокаркасом" class="miniature-panel" src="https://imageserver.ibud.ua/third/2014/12/10/67x67x1/1454407390-1418209664-13923677249-a4peremichkiweb.jpg"></a>
+      <span fxLayout="row" fxFlexAlign="start" class="collapseText" (click)="isCollapsedFirst = !isCollapsedFirst"
+        [attr.aria-expanded]="!isCollapsedFirst" aria-controls="collapseBasic">
+        <mat-icon class="customIconColor" [hidden]="!isCollapsedFirst">add_circle</mat-icon>
+        <mat-icon class="customIconColor" [hidden]="isCollapsedFirst">remove_circle</mat-icon>Другое сечение
+      </span>
+      <div id="collapseBasic" [collapse]="isCollapsedFirst">
+        <div>
+          <a href="#"><img [tooltip]="customTooltip" class="miniature-panel" src="https://imageserver.ibud.ua/third/2014/12/10/67x67x1/1454407390-1418209664-13923677249-a4peremichkiweb.jpg"></a>
+          <a href="#"><img [tooltip]="customTooltip" class="miniature-panel" src="https://imageserver.ibud.ua/third/2014/12/10/67x67x1/1454407390-1418209664-13923677249-a4peremichkiweb.jpg"></a>
+          <a href="#"><img [tooltip]="customTooltip" class="miniature-panel" src="https://imageserver.ibud.ua/third/2014/12/10/67x67x1/1454407390-1418209664-13923677249-a4peremichkiweb.jpg"></a>
+          <a href="#"><img [tooltip]="customTooltip" class="miniature-panel" src="https://imageserver.ibud.ua/third/2014/12/10/67x67x1/1454407390-1418209664-13923677249-a4peremichkiweb.jpg"></a>
+          <a href="#"><img [tooltip]="customTooltip" class="miniature-panel" src="https://imageserver.ibud.ua/third/2014/12/10/67x67x1/1454407390-1418209664-13923677249-a4peremichkiweb.jpg"></a>
+          <a href="#"><img [tooltip]="customTooltip" class="miniature-panel" src="https://imageserver.ibud.ua/third/2014/12/10/67x67x1/1454407390-1418209664-13923677249-a4peremichkiweb.jpg"></a>
+          <a href="#"><img [tooltip]="customTooltip" class="miniature-panel" src="https://imageserver.ibud.ua/third/2014/12/10/67x67x1/1454407390-1418209664-13923677249-a4peremichkiweb.jpg"></a>
+          <a href="#"><img [tooltip]="customTooltip" class="miniature-panel" src="https://imageserver.ibud.ua/third/2014/12/10/67x67x1/1454407390-1418209664-13923677249-a4peremichkiweb.jpg"></a>
+          <a href="#"><img [tooltip]="customTooltip" class="miniature-panel" src="https://imageserver.ibud.ua/third/2014/12/10/67x67x1/1454407390-1418209664-13923677249-a4peremichkiweb.jpg"></a>
+          <a href="#"><img [tooltip]="customTooltip" class="miniature-panel" src="https://imageserver.ibud.ua/third/2014/12/10/67x67x1/1454407390-1418209664-13923677249-a4peremichkiweb.jpg"></a>
+          <a [hidden]="!show" href="#"><img [tooltip]="customTooltip" class="miniature-panel" src="https://imageserver.ibud.ua/third/2014/12/10/67x67x1/1454407390-1418209664-13923677249-a4peremichkiweb.jpg"></a>
+          <a [hidden]="!show" href="#"><img [tooltip]="customTooltip" class="miniature-panel" src="https://imageserver.ibud.ua/third/2014/12/10/67x67x1/1454407390-1418209664-13923677249-a4peremichkiweb.jpg"></a>
           </div>
           <span>
-            <a class="dotted" [hidden]="show" (click)="showMore()">Показать все</a>
-            <a class="dotted" [hidden]="!show" (click)="showMore()">Скрыть</a>
+          <a class="dotted" [hidden]="show" (click)="showMore()">Показать все</a>
+          <a class="dotted" [hidden]="!show" (click)="showMore()">Скрыть</a>
           </span>
-        </mat-expansion-panel>        
-      <mat-expansion-panel>
-        <mat-expansion-panel-header>
-          <mat-panel-title>
-            Другая длина
-          </mat-panel-title>
-        </mat-expansion-panel-header>
-        <div>
-          <a href="#"><img tooltip="Армированная перемычка AEROC ПБ120.10.25-10Н с облегченным армокаркасом" class="miniature-panel" src="https://imageserver.ibud.ua/third/2014/12/10/67x67x1/1454407390-1418209664-13923677249-a4peremichkiweb.jpg"></a>
-          <a href="#"><img tooltip="Армированная перемычка AEROC ПБ120.10.25-10Н с облегченным армокаркасом" class="miniature-panel" src="https://imageserver.ibud.ua/third/2014/12/10/67x67x1/1454407390-1418209664-13923677249-a4peremichkiweb.jpg"></a>
-        </div>
-      </mat-expansion-panel>
+      </div>
+      <hr>
+      <span fxLayout="row" fxFlexAlign="start" class="collapseText" (click)="isCollapsedSecond = !isCollapsedSecond"
+        [attr.aria-expanded]="!isCollapsedSecond" aria-controls="collapseBasic">
+        <mat-icon class="customIconColor" [hidden]="!isCollapsedSecond">add_circle</mat-icon><mat-icon class="customIconColor" [hidden]="isCollapsedSecond">remove_circle</mat-icon>Другая длина
+      </span>
+      <div id="collapseBasic" [collapse]="isCollapsedSecond">
+        <a href="#"><img [tooltip]="customTooltip" class="miniature-panel" src="https://imageserver.ibud.ua/third/2014/12/10/67x67x1/1454407390-1418209664-13923677249-a4peremichkiweb.jpg"></a>
+        <a href="#"><img [tooltip]="customTooltip" class="miniature-panel" src="https://imageserver.ibud.ua/third/2014/12/10/67x67x1/1454407390-1418209664-13923677249-a4peremichkiweb.jpg"></a>
+      </div>
+      <hr>
     </div>
   </div>
 </div>
+
+<ng-template #customTooltip>
+  <div fxLayout="row" fxLayoutAlign="space-between start" >
+    <div fxFlex="70">
+      Армированная перемычка AEROC ПБ120.10.25-10Н с облегченным армокаркасом
+    </div>
+    <div fxFlex class="price">
+      Цену уточняйте
+    </div>
+  </div>
+</ng-template>

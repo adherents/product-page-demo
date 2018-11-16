@@ -18,8 +18,11 @@ button {
 .tooltip-inner {
   background-color: #fff;
   border-radius: 0px;
-  box-shadow: 0px 0px 20px black;
+  box-shadow: 0px 0px 15px black;
   color : black;
+  max-height: 60px;
+  max-width: 300px;
+  line-height: 1;
 }
 
 .tooltip.top .tooltip-arrow:before,

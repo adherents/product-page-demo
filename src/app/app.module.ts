@@ -4,6 +4,7 @@ import { FormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { TooltipModule } from 'ngx-bootstrap/tooltip';
+import { CollapseModule } from 'ngx-bootstrap/collapse';
 import { NgxGalleryModule } from 'ngx-gallery';
 import { TabsModule } from 'ngx-bootstrap/tabs';
 import { RatingModule } from 'ngx-bootstrap/rating';
@@ -42,6 +43,7 @@ import { InstructionsComponent } from './product-info/instructions/instructions.
     FlexLayoutModule,
     FormsModule,
     TooltipModule.forRoot(),
+    CollapseModule.forRoot(),
     NgxGalleryModule,
     TabsModule.forRoot(),
     RatingModule.forRoot(),

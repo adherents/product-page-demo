@@ -12,6 +12,8 @@ export class ProductHeaderComponent {
   show: boolean = false;
   galleryOptions: NgxGalleryOptions[];
   galleryImages: NgxGalleryImage[];
+  isCollapsedFirst = false;
+  isCollapsedSecond = true;
 
   openPrices() {
     this.reviews.selectTabPrices();

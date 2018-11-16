@@ -12,12 +12,34 @@
   }
 }
 
-
-span.offers {
+.offers {
   color: #b3b4b7;
   display: block;
   padding: 0 0 15px 0;
   font-size: 14px;
+}
+
+.collapseText {
+  font-size: 14px;
+  font-weight: bold;
+  display: block;
+  cursor: pointer;
+  width: auto;
+  display: inline-block;
+}
+
+hr {
+  border: 0;
+  display:block;
+  width: 100%;               
+  background-color:#EDECEC;
+  height: 1px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.customIconColor {
+  color: #727375!important;
 }
 
 b {
@@ -46,6 +68,11 @@ b {
 
 ::ng-deep .mat-tooltip {
   font-size: 13px;
+}
+
+.price {
+  font-size: 13px;
+  font-weight: bold;
 }
 
 #star.mat-icon {
